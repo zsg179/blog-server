@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 80011
 File Encoding         : 65001
 
-Date: 2020-07-29 17:29:55
+Date: 2020-07-30 17:04:47
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -23,13 +23,14 @@ CREATE TABLE `zj_articles` (
   `id` bigint(255) NOT NULL AUTO_INCREMENT COMMENT '博文ID',
   `user_id` bigint(20) NOT NULL COMMENT '发表用户ID',
   `title` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '博文标题',
+  `img` varchar(255) DEFAULT NULL COMMENT '博客封面图片地址',
   `content` longtext CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '博文内容',
   `views` bigint(20) NOT NULL DEFAULT '0' COMMENT '浏览量',
   `comments` bigint(20) NOT NULL DEFAULT '0' COMMENT '评论总数',
   `likes` bigint(20) DEFAULT '0' COMMENT '点赞量',
+  `status` tinyint(1) DEFAULT '0' COMMENT '0：正常，-1：已删除',
   `created` datetime DEFAULT NULL COMMENT '发表时间',
   `updated` bigint(20) NOT NULL,
-  `status` tinyint(1) DEFAULT '0' COMMENT '0：正常，-1：已删除',
   PRIMARY KEY (`id`) USING BTREE,
   KEY `user_id` (`user_id`) USING BTREE,
   CONSTRAINT `zj_articles_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `zj_users` (`user_id`)
