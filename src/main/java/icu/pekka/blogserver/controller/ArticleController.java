@@ -22,9 +22,22 @@ public class ArticleController {
 
     @GetMapping("/getNBlogs")
     @ResponseBody
-    public String getNBlogs() {
+    public R getNBlogs() {
         List<ArticleEntity> nBlogsList = articleService.getNBlogs();
-        return R.ok(nBlogsList);
-        System.out.println(nBlogsList);
+        return R.ok().put("newestBlogs", nBlogsList);
+    }
+
+    @GetMapping("/getCBlogs")
+    @ResponseBody
+    public R getCBlogs() {
+        List<ArticleEntity> cBlogsList = articleService.getCBlogs();
+        return R.ok().put("carouselBlogs", cBlogsList);
+    }
+
+    @GetMapping("/getRBlogs")
+    @ResponseBody
+    public R getRBlogs() {
+        List<ArticleEntity> rBlogsList = articleService.getRBlogs();
+        return R.ok().put("recommendBlogs", rBlogsList);
     }
 }
