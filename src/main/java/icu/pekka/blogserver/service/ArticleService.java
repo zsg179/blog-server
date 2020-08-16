@@ -1,5 +1,6 @@
 package icu.pekka.blogserver.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
 import icu.pekka.blogserver.entity.ArticleEntity;
 
@@ -23,4 +24,6 @@ public interface ArticleService extends IService<ArticleEntity> {
      * @return
      */
     List<ArticleEntity> getRBlogs();
+
+    IPage<ArticleEntity> getHBlogs(Integer currentPage, Integer tagId,Integer pageSize);
 }

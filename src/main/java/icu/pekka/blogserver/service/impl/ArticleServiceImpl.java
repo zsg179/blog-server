@@ -1,6 +1,8 @@
 package icu.pekka.blogserver.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import icu.pekka.blogserver.dao.ArticleDao;
 import icu.pekka.blogserver.entity.ArticleEntity;
@@ -41,5 +43,14 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleDao, ArticleEntity> i
                 .orderByDesc("views")
                 .last("limit 6"));
 
+    }
+
+    @Override
+    public IPage<ArticleEntity> getHBlogs(Integer currentPage, Integer tagId,Integer pageSize) {
+        Page<ArticleEntity> page = new Page(currentPage, pageSize);
+        return articleDao.selectPage(page, new QueryWrapper<ArticleEntity>()
+                .eq("status", 1)
+                .eq("tag_id", tagId)
+                .orderByDesc("created"));
     }
 }
