@@ -8,7 +8,7 @@ spring:
 mybatis-plus:
   # mapper-locations: classpath*:/mapper/**/*.xml
   #实体扫描
-  typeAliasesPackage: icu.pekka.blogserver.entity
+  typeAliasesPackage: icu.pekka.commons.entity
   global-config:
     #数据库相关配置
     db-config:
@@ -31,4 +31,4 @@ mybatis-plus:
     jdbc-type-for-null: 'null'
 logging:
   level:
-    icu.pekka.blogserver.dao: debug
+    icu.pekka.commons.dao: debug

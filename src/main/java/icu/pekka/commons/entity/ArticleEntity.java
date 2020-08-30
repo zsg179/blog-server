@@ -1,4 +1,4 @@
-package icu.pekka.blogserver.entity;
+package icu.pekka.commons.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;

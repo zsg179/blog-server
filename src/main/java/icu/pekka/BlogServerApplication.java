@@ -1,4 +1,4 @@
-package icu.pekka.blogserver;
+package icu.pekka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

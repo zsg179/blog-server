@@ -1,8 +1,8 @@
-package icu.pekka.blogserver.service;
+package icu.pekka.blog.service;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
-import icu.pekka.blogserver.entity.ArticleEntity;
+import icu.pekka.commons.entity.ArticleEntity;
 
 import java.util.List;
 

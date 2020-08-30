@@ -1,16 +1,15 @@
-package icu.pekka.blogserver.service.impl;
+package icu.pekka.blog.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import icu.pekka.blogserver.dao.ArticleDao;
-import icu.pekka.blogserver.entity.ArticleEntity;
-import icu.pekka.blogserver.service.ArticleService;
+import icu.pekka.commons.dao.ArticleDao;
+import icu.pekka.commons.entity.ArticleEntity;
+import icu.pekka.blog.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.text.SimpleDateFormat;
 import java.util.List;
 
 @Service

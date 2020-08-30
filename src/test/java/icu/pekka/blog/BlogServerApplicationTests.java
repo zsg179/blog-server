@@ -1,4 +1,4 @@
-package icu.pekka.blogserver;
+package icu.pekka.blog;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,9 +1,6 @@
-package icu.pekka.blogserver.utils;
-
-import icu.pekka.blogserver.entity.ArticleEntity;
+package icu.pekka.commons.utils;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**

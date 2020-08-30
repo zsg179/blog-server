@@ -1,9 +1,9 @@
-package icu.pekka.blogserver.controller;
+package icu.pekka.blog.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import icu.pekka.blogserver.entity.ArticleEntity;
-import icu.pekka.blogserver.service.ArticleService;
-import icu.pekka.blogserver.utils.R;
+import icu.pekka.commons.entity.ArticleEntity;
+import icu.pekka.blog.service.ArticleService;
+import icu.pekka.commons.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
