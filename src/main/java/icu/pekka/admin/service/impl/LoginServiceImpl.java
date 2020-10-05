@@ -25,6 +25,17 @@ public class LoginServiceImpl extends ServiceImpl<AdminDao, AdminEntity> impleme
         if (admin == null) {
             return R.error("账号不存在");
         }
-        return R.ok();
+        return R.ok().put("data", admin.getAdminName());
+    }
+
+    @Override
+    public R getAdminInfo(String token) {
+        AdminEntity admin = adminDao.selectOne(new QueryWrapper<AdminEntity>().eq("admin_name", token));
+        return R.ok().put("data", admin.getAdminName());
+    }
+
+    @Override
+    public R logout() {
+        return null;
     }
 }

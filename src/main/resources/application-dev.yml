@@ -4,7 +4,7 @@ spring:
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
 #      url: jdbc:mysql://localhost:3306/blogdb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
-      url: jdbc:mysql://120.25.207.108:3306/blogdb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+      url: jdbc:mysql://120.25.207.108:3306/blogdb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
       username: root
       password: root
       initial-size: 10
